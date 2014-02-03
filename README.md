@@ -1,6 +1,6 @@
 # Apple branded demo
 
-A [AdmoApplication](https://github.com/admoexperience) build as a demo to show case some Apple products.
+A [Admo](https://github.com/admoexperience) demo to show case Apple products.
 
 ## Demo
 

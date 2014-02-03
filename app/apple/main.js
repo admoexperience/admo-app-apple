@@ -128,6 +128,6 @@ AdmoApp.MainCtrl = function($scope) {
     AdmoApp.angularScope = $scope;
 
     //Set the default screen for the app (ie the starting screen.)
-    AdmoApp.setScreen(AdmoApp.Screens.guidance);
+    AdmoApp.setScreen(AdmoApp.Screens.startScreen);
 
 };

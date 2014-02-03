@@ -1,0 +1,56 @@
+.two-menu {
+  position:absolute;
+  @include screen-size;
+  -webkit-transition: opacity 0.5s;
+  opacity: 0;
+
+  .background-canvas{
+    position:absolute;
+    @include screen-size;
+    background-color: #eff3f5;
+  }
+  .phones-left{
+    z-index: 20;
+    position:absolute;
+    left: 0px;
+    top: 350px;
+    width: 1920px;
+    height: 1000px;
+    background-position: bottom left;
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-image: url(/apple/images/4-menu/left.png);
+
+  }
+  .phones-right{
+    z-index: 20;
+    position:absolute;
+    left: 0px;
+    top: 350px;
+    width: 1920px;
+    height: 1000px;
+    background-position: bottom right;
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-image: url(/apple/images/4-menu/right.png);
+
+  }
+  .title-menu{
+    z-index: 20;
+    position:absolute;
+    left: 0px;
+    top: 125px;
+    width: 1920px;
+    height: 200px;
+    background-position: bottom center;
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-image: url(/apple/images/4-menu/heading.png);
+  }
+}
+
+.backdrop{
+  position:absolute;
+  @include screen-size;
+  background-color: white;
+}

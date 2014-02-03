@@ -1,0 +1,122 @@
+.guidance-container {
+  @include screen-size;
+  position:absolute;
+  background-color: #f4f5f6;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+
+  .guidance-element {
+    @include screen-size;
+    position:absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+
+    .guidance-title{
+      position:absolute;
+      top:50px;
+      left:0px;
+      width: 1920px;
+      height: 225px;
+      background-position: center;
+      background-repeat:no-repeat;
+      background-size: 40%;
+      background-image: url(/apple/images/2-get-into-posotion/heading.png);
+  /*
+      -webkit-animation-name: guidance-container-jiggleBig;
+      -webkit-animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      */
+    }
+
+    .center-image{
+      position:absolute;
+      top:400px;
+      left:760px;
+      width: 400px;
+      height: 400px;
+      background-position: 50% 45%;
+      background-repeat:no-repeat;
+      background-size: 40%;
+      background-image: url(/apple/images/2-get-into-posotion/apple-logo.png);
+      background-color: #25a3fe;
+      border-radius: 50%;
+
+      -webkit-animation-name: guidance-container-jiggle;
+      -webkit-animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+    }
+    .human-image{
+      position:absolute;
+      top:700px;
+      left:760px;
+      width: 300px;
+      height: 300px;
+      background-size: contain;
+      background-repeat:no-repeat;
+      background-position: center;
+      background-image: url(/apple/images/2-get-into-posotion/user.png);
+      z-index: 5;
+    }
+    .human-shadow{
+
+    }
+  }
+
+  .video-container {
+    @include screen-size;
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+
+    #screensaver-video{
+      position:absolute;
+      @include screen-size;
+      z-index:10;
+    }
+  }
+}
+@-webkit-keyframes guidance-container-jiggle
+{
+  0% {
+    background-size: 40%;
+  }
+  50% {
+    background-size: 40%;
+  }
+  60% {
+    background-size: 50%;
+  }
+  70% {
+    background-size: 35%;
+  }
+  80% {
+    background-size: 40%;
+  }
+  100% {
+    background-size: 40%;
+  }
+}
+@-webkit-keyframes guidance-container-jiggleBig
+{
+  0% {
+    background-size: 40%;
+  }
+  50% {
+    background-size: 40%;
+  }
+  60% {
+    background-size: 50%;
+  }
+  70% {
+    background-size: 35%;
+  }
+  80% {
+    background-size: 40%;
+  }
+  100% {
+    background-size: 40%;
+  }
+}

@@ -1,0 +1,56 @@
+.start-container {
+  @include screen-size;
+  position:absolute;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  z-index: 20;
+
+  .start-title{
+    position:absolute;
+    top:50px;
+    left:0px;
+    width: 1920px;
+    height: 225px;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-image: url(/apple/images/3-start/heading.png);
+  }
+  .static-phones{
+    @include screen-size;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-position: left bottom;
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-image: url(/apple/images/3-start/left.png);
+  }
+  .dynamic-phones{
+    position:absolute;
+    top:1100px;
+    left:510px;
+    width: 270px;
+    height: 650px;
+    background-position: top left;
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-image: url(/apple/images/3-start/pink-phone.png);
+    -webkit-transition: top 1s;
+  }
+  .hover-text{
+    position:absolute;
+    bottom:530px;
+    left:1430px;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    background-position: bottom left;
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-image: url(/apple/images/3-start/hover-here.png);
+    -webkit-transform: translate(0px,0px);
+    -webkit-transition: width 1s, height 1s, opacity 0.5s, -webkit-transform 0.5s;
+
+  }
+}

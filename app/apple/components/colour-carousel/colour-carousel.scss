@@ -1,0 +1,197 @@
+.colour-carousel {
+  background-color:black;
+  position:absolute;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+
+  @include screen-size;
+
+  .arrows{
+    position:absolute;
+    @include screen-size;
+    z-index: 50;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: 95%;
+    background-image: url(/apple/images/5-explore-color/arrows.png);
+  }
+
+
+  .frame-container{
+    position:absolute;
+    @include screen-size;
+
+    .title{
+      position:absolute;
+      left: 1000px;
+      top: 400px;
+      width: 550px;
+      height: 400px;
+      background-position: top left;
+      background-repeat:no-repeat;
+      background-size: contain;
+      background-image: url(/apple/images/5-explore-color/iphone-logo.png);
+      z-index: 100;
+
+    }
+
+    .frame{
+      z-index: 20;
+      position:absolute;
+      @include screen-size;
+
+      &.left {
+        opacity: 0;
+      }
+      &.middle {
+        opacity: 1;
+      }
+      &.right {
+        opacity: 0;
+      }
+
+      .content{
+        position:absolute;
+        left: 150px;
+        top: 100px;
+        width: 800px;
+        height: 1000px;
+        background-position: bottom center;
+        background-repeat:no-repeat;
+        background-size: contain;
+        z-index: 10;
+      }
+
+      .background{
+        position:absolute;
+        @include screen-size;
+        z-index: 5;
+      }
+
+    }
+
+  }
+
+  .animate{
+    -webkit-transition: 1s ease-in-out;
+  }
+
+  .enlarge{
+    -webkit-animation: makeBig 2s;
+  }
+
+  .shift-text{
+    -webkit-animation: textDown 2s;
+  }
+
+  .swipe-container{
+    z-index: 500;
+    @include screen-size;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.7);
+
+    .hand{
+      position:absolute;
+      top:430px;
+      height:220px;
+      width: 220px;
+      z-index: 25;
+      opacity: 0;
+
+      background-image: url(/apple/images/3-start/swipe-hand.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 50;
+    }
+
+    .area{
+      background-color: #f2f2f2;
+      //background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#649cc9), color-stop(100%,#207dc9), color-stop(100%,#7db9e8));
+
+      position:absolute;
+      top:415px;
+      height:250px;
+      left:500px;
+      right:500px;
+      z-index: 25;
+      opacity: 0.95;
+      border-radius: 125px;
+    }
+
+    .text{
+      position:absolute;
+      top:415px;
+      height:250px;
+      left:450px;
+      right:500px;
+      z-index: 25;
+      opacity: 1;
+      line-height: 250px;
+
+      font-size:70px;
+      color: #25a3fe;
+      text-align: center;
+    }
+  }
+
+  .index-container{
+    top:25px;
+    left:0px;
+    height:75px;
+    width: 1920px;
+    z-index: 500;
+    position: absolute;
+
+    .index-items{
+      opacity: 0.5;
+      height:20px;
+      width: 20px;
+      border-radius: 20px;
+      border-color: #383a40;
+      border-width: 2px;
+      background-color: #383a40;
+      position: absolute;
+      -webkit-transform: scale(1);
+      border-style:solid;
+    }
+    .index-item-animate{
+      -webkit-transition: 0.5s ease-in-out;
+    }
+
+    .button-selected{
+      -webkit-transform: scale(2);
+      background-color: transparent;
+    }
+  }
+
+}
+
+@-webkit-keyframes makeBig
+{
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes textDown
+{
+  0% {
+    top:750px;
+  }
+  50% {
+    top:900px;
+  }
+  100% {
+    top:750px;
+  }
+}

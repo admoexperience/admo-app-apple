@@ -1,0 +1,20 @@
+/*Variables*/
+@import "variables";
+
+// VARIABLES - Pre-asigned
+$removeMeIamHereToShowYou: #FFFFFF;
+$font: 'myriad';
+// Screens
+@import "colour-carousel/colour-carousel.scss";
+@import "circular-button/circular-button.scss";
+@import "sliding-carousel/sliding-carousel.scss";
+@import "user-vector/user-vector.scss";
+@import "two-menu/two-menu.scss";
+@import "font.scss";
+
+body {
+  font-family: $font;
+}
+@import "start-container/start-container.scss";
+@import "guidance-container/guidance-container.scss";
+@import "screensaver/screensaver.scss";
